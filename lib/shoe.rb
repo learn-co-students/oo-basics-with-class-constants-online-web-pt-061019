@@ -7,16 +7,17 @@ class Shoe
   def initialize(brand)
     @brand = brand
      BRANDS << brand
+     BRANDS.uniq!
   end
+
+# not working:
+# BRANDS.uniq ?
+# If BRANDS.find?(brands) BRANDS << brand
+# If BRANDS.include?(brand) BRANDS << brand
 
   def cobble
     self.condition = "new"
     puts "Your shoe is as good as new!"
   end
-
-  # def brand(brand)
-  #   @brand = brand
-  #   BRANDS << brand
-  # end
 
 end
